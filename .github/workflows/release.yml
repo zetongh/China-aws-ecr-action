@@ -20,6 +20,6 @@ jobs:
 
       - name: build and push latest docker image to GCR
         run: |
-          docker pull ghcr.io/zetongh/china-aws-ecr-action:latest
+          docker pull ghcr.io/kciter/aws-ecr-action:latest
           docker build . --tag ghcr.io/zetongh/china-aws-ecr-action:$GITHUB_SHA --cache-from ghcr.io/zetongh/china-aws-ecr-action:latest
           docker push ghcr.io/zetongh/china-aws-ecr-action:$GITHUB_SHA
